@@ -13,31 +13,18 @@ const BuggyButtons = () => {
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <div
-          style={{ display: "flex", justifyContent: "center", marginTop: 50 }}
-        >
+      <div className="flex flex-col">
+        <div className="flex justify-center mt-[50px]">
           {IDs.map((item) => {
             // IDs arrayini map methodu ile dolaşırken bir çıktı alabilmemiz için return eklememiz gerek
             return (
-              <div
-                key={item}
-                style={{
-                  marginRight: 10,
-                }}
-                id={item}
-              >
+              <div key={item} className="mr-[10px]">
                 <BuggyButton setOpenCount={setOpenCount} />
               </div>
             );
           })}
         </div>
-        <div style={{ alignSelf: "center", marginTop: 20 }}>
+        <div className="self-center mt-[20px]">
           {openCount + " açık tavşan "}
         </div>
       </div>
